@@ -1,4 +1,10 @@
+import { useSelector } from 'react-redux';
+import { selectedBook } from './BookSlice';
+
 const BookDetail = () => {
+    const selectBook = useSelector(selectedBook);
+    console.log('selectBook', selectBook);
+
   return(
     <>
         <div>

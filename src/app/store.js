@@ -14,6 +14,7 @@ import {
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import { thunk } from 'redux-thunk'
+import booksReducer from '../features/books/BookSlice'
 
 const middleware = [ thunk ]
 
@@ -23,6 +24,7 @@ const persistConfig = {
 }
 
 const reducers = combineReducers({
+ booksReducer,            
 });
 
 const appliedMiddleware = applyMiddleware(...middleware)
