@@ -3,11 +3,13 @@ import { selectedBook } from './BookSlice';
 
 const BookDetail = () => {
     const selectBook = useSelector(selectedBook);
+    const { title, description, imageLinks }  = selectBook;
+
   return(
     <>
-        <div>
-            <h2>Book Detail</h2>
-        </div>
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <img alt="" src={imageLinks.thumbnail}/>
     </>
 )};
 
