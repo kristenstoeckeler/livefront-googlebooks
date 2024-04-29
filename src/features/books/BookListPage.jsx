@@ -15,51 +15,47 @@ import {
 
 const BookListPage  = () => {
     const dispatch = useDispatch();
-    const [isLoading, setIsLoading] = useState(false);
     const bookData = useSelector(selectAllBooks);
 
     useEffect(() => {
-        if(bookData.length===0) {
-            setIsLoading(true);
+        if(bookData?.length===0) {
             dispatch(fetchBooks());
         }
-        setIsLoading(false);
     }, [dispatch, bookData]);
 
     const handleClick = (e) => {
+        console.log('in handleclick');
         dispatch(selectBook(e.volumeInfo))
     }
+
+    console.log('bookData', bookData)
     
   return (
     <>
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
             <h1>N.K. Jemisin's Complete Works</h1>
-            {isLoading ? (
-                <p>Loading ...</p>
-                ) : (
-                    <ul>
-                        { bookData.length > 0 && bookData.map((book, index) => {
-                            return(
-                                <>
-                                    <h2 key={index}>
-                                        <li>
-                                            <img alt="" src={book.volumeInfo.imageLinks.smallThumbnail}/>
-                                            <Link 
-                                                onClick={handleClick.bind(this, book)}
-                                                to={book.volumeInfo.title}
-                                                value={book.volumeInfo} 
-                                                >
-                                                    {book.volumeInfo.title}
-                                            </Link>
-                                        </li>
-                                    </h2>
-
-                                </>
-                            )      
-                        })}
-                    </ul>
-            )}
+                <ul>
+                    { bookData?.length > 0 && bookData.map((book, index) => {
+                        return(
+                            <>
+                                <h2 key={index}>
+                                    <li>
+                                        <img alt="" data-testid={"img"} src={book.volumeInfo.imageLinks.smallThumbnail}/>
+                                        <Link 
+                                            onClick={handleClick.bind(this, book)}
+                                            to={book.volumeInfo.title}
+                                            value={book.volumeInfo} 
+                                            data-testid={"link"}
+                                            >
+                                                {book.volumeInfo.title}
+                                        </Link>
+                                    </li>
+                                </h2>
+                            </>
+                        )      
+                    })}
+                </ul>
         </div>
     </main>
     </>

@@ -61,7 +61,7 @@ describe("BookDetail component", () => {
     render(<BookDetail />);
     const title = screen.getByTestId("title");
     const desc = screen.getByTestId("desc");
-    const imageLinks = screen.getByTestId("image-links");
+    const imageLinks = screen.getByTestId("img");
     expect(title).toBeInTheDocument();
     expect(desc).toBeInTheDocument();
     expect(imageLinks).toBeInTheDocument();
@@ -74,7 +74,7 @@ describe("BookDetail component", () => {
     render(<BookDetail />);
     const title = screen.queryByTestId("title");
     const desc = screen.queryByTestId("desc");
-    const imageLinks = screen.queryByTestId("image-links");
+    const imageLinks = screen.queryByTestId("img");
     expect(title).toBeNull();
     expect(desc).toBeNull();
     expect(imageLinks).toBeNull();

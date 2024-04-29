@@ -11,7 +11,7 @@ const BookDetail = () => {
             <div>
               <h3 data-testid="title">{title}</h3>
               <p data-testid="desc">{description}</p>
-              {imageLinks && (<img alt="" data-testid="image-links" src={imageLinks.thumbnail}/>)}
+              {imageLinks && (<img alt="" data-testid="img" src={imageLinks.thumbnail}/>)}
             </div>
           )};
         </>
