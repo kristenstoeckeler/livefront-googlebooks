@@ -72,19 +72,14 @@ a {
 }
 
 a:hover {
-  color: #474a42;
-}
-
-.app {
-  padding: 0rem 10rem 4rem 10rem;
+  color: rgb(247, 84, 85)
 }
 
 .banner {
   padding: 2rem 0rem 2rem 0rem;
 
-  .h1 {
+  h1 {
     font-size: 2rem;
-    padding: 2rem 0rem 0rem 0rem;
   }
 
   .author {
@@ -92,10 +87,13 @@ a:hover {
   }
 }
 
-.desc {
+.box {
   flex-direction: row;
-  display: flex;
-  align-items: flex-start;
+    display: flex;
+    align-items: flex-start;
+}
+
+.desc {
   background: #ebede8;
   border-radius: 1rem;
   box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.1);
@@ -109,7 +107,11 @@ a:hover {
 }
 
 .title {
-  padding-top: 4rem;
+  padding-top: 2rem;
+}
+
+.view {
+  padding: 0rem 10rem 4rem 10rem;
 }
 
 .wrapper {
@@ -119,10 +121,10 @@ a:hover {
 
 /* for small screens */
 @media only screen and (max-width: 768px) {
-  .app {
+
+  .view{
     padding: 1rem;
   }
-
   a {
     font-size: x-large;
   }
@@ -140,13 +142,16 @@ a:hover {
     gap: 0rem;
   }
 
-
   .image {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
     max-width: 12rem;
+  }
+
+  .box {
+    display: block;
   }
 
   .desc {
@@ -163,7 +168,7 @@ a:hover {
 
   .title  {
     font-size: xx-large;
-    padding-top: 2rem;
+    padding: 1rem;
   }
 }
 
@@ -178,6 +183,10 @@ a:hover {
     gap: 10px;
   }
 
+  li {
+    margin: 1rem;
+  }
+
   .desc {
     gap: 1rem;
     border-radius: 1rem;
@@ -186,5 +195,9 @@ a:hover {
     margin: 2rem 20rem 20rem 20rem;
     vertical-align: top;
     padding: 2rem;
+  }
+
+  img {
+    height: 12rem;
   }
 }

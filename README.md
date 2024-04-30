@@ -1,6 +1,11 @@
-# Getting Started with Create React App and Redux
+# Welcome to The Complete Works of N.K. Jemisin!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+N.K. Jemisin wrote one of my favorite series, The Broken Earth trilogy, and I keep meaning to read the rest of her books. This app consumes the Google Books API to display all of her works, with a detail view of each book.
+
+This React app uses Redux and Redux-Persist, the latter of which persists reducer states in local storage to reduce network calls. Most of the tests are using the React Testing Library framework and methodology.
+
+This app has been validated for Chrome, Firefox and iPhone 11.
+
 
 ## Available Scripts
 

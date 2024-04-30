@@ -9,6 +9,7 @@ import {
     selectAllBooks,
     selectBook,
 } from './BookSlice';
+import Header from '../Header';
 
 const BookListPage  = () => {
     const dispatch = useDispatch();
@@ -26,12 +27,9 @@ const BookListPage  = () => {
 
   return (
     <>
-        <header />
         <main className="app">
-            <div className="banner">
-                <h1 >THE COMPLETE WORKS OF</h1>
-                <h1 className="author">N.K. JEMISIN</h1>
-            </div>
+                <Header />
+                <div className="view">
                     <ul>
                         { bookData?.length > 0 && bookData.map((book, index) => {
                             return(
@@ -51,6 +49,7 @@ const BookListPage  = () => {
                             )      
                         })}
                     </ul>
+                </div>
         </main>
         <footer/>
     </>
