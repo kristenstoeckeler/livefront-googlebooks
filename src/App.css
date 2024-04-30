@@ -1,21 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Didact+.didact-gothic-regular");
+
 * {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box; 
-}
-
-header {
-  background-color: #474a42;
-  padding: 2rem;
-  margin: 0rem 0rem 1rem 0rem;
-  box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.15);
-}
-
-footer {
-  background-color: #474a42;
-  padding: 2rem;
-  margin-top: auto;
 }
 
 body {
@@ -26,40 +12,51 @@ body {
   flex-direction: column;
 }
 
-.title {
-  padding-top: 4rem;
+header {
+  background-color: #474a42;
+  padding: 2rem;
+  margin: 0rem 0rem 1rem 0rem;
+  box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.15);
 }
 
-img{
+ head {
+   padding-top: 0;
+ }
+
+footer {
+  background-color: #474a42;
+  padding: 2rem;
+  margin-top: auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: xx-large;
+}
+
+h3 {
+  text-align: center;
+}
+
+p {
+  font-size: large;
+  padding: 1rem;
+}
+
+img {
   box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.15);
   margin: 1rem;
 }
 
-.banner {
-  padding: 2rem 0rem 2rem 0rem;
-  .h1 {
-    font-size: 2rem;
-    padding: 2rem 0rem 0rem 0rem;
-  }
-  .author {
-    font-size: 5rem;
-  }
+ul {
+  list-style: none;
 }
-
-.wrapper {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* li+li {
-  margin-top: 1rem;
-} */
 
 li {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  background: #f0f0e6;
+  background: #ebede8;
   border-radius: 1rem;
   box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.1);
   margin-bottom: 2rem;
@@ -74,126 +71,104 @@ a {
   padding: 1.5rem 1rem 0rem 0rem;
 }
 
-a:hover{
+a:hover {
   color: #474a42;
 }
 
-h1 {
-  font-family: "Didact Gothic", sans-serif;
-  text-align: center;
-  font-size: xx-large;
-}
-
-h2 {
-  text-shadow: 1px 0px 0px black;
-  font-style: italics;
-}
-
-h3 {
-  font-family: "Didact Gothic", sans-serif;
-  text-align: center;
-}
-
 .app {
-  font-family: "Didact Gothic", sans-serif;
   padding: 0rem 10rem 4rem 10rem;
 }
 
-.didact-gothic-regular {
-  font-family: "Didact Gothic", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
+.banner {
+  padding: 2rem 0rem 2rem 0rem;
 
-.detail {
-    padding: 5rem 10rem 0rem 10rem;
-}
-
-head {
-  padding-top: 0;
-}
-
-ul{
-  list-style: none;
-}
-h1 {
-    text-align: center;
-    font-size: xx-large;
+  .h1 {
+    font-size: 2rem;
+    padding: 2rem 0rem 0rem 0rem;
   }
+
+  .author {
+    font-size: 5rem;
+  }
+}
 
 .desc {
   flex-direction: row;
   display: flex;
   align-items: flex-start;
-  background: #f7f5f0;
+  background: #ebede8;
   border-radius: 1rem;
   box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.1);
 }
 
-.detail {
-    padding: 1rem 1rem 0rem 1rem;
-  }
-
-p {
-  font-size: large;
+.page {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
- /* for small screens */
+.title {
+  padding-top: 4rem;
+}
+
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* for small screens */
 @media only screen and (max-width: 768px) {
   .app {
-      padding: 1rem;
-    }
+    padding: 1rem;
+  }
+
   a {
-      /* padding: 1rem; */
-      font-size: x-large;
+    font-size: x-large;
   }
-  .desc {
-    gap: 1rem;
-    border-radius: 1rem;
-    box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.1);
-    padding: 2rem;
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
+
+  p {
+    padding: 1rem 2rem 2rem 2rem;
+    font-size: medium;
   }
-  .detail {
-    padding: 0rem;
+
+  ul  {
+    padding-inline-start: 0px;
+  }   
+
+  li {
+    gap: 0rem;
   }
+
 
   .image {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
+    max-width: 12rem;
   }
 
-  p {
-    padding-top: 1rem;
-    font-size: medium;
-  }
-
-}
-
- /* for large screens */
-@media only screen and (min-width: 992px) {
   .desc {
     gap: 1rem;
     border-radius: 1rem;
     box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.1);
-    background: #f0f0e6;
-    margin: 2rem 20rem 20rem 20rem;
-    vertical-align: top;
-    padding: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: .5rem;
+    margin-top:  1rem;
+    width: 90%;
   }
 
-  .detail {
-      padding: 0rem;
+  .title  {
+    font-size: xx-large;
+    padding-top: 2rem;
   }
+}
 
-  li {
-    margin: 0rem 1rem 1rem 1rem;
-  }
+/* for large screens */
+@media only screen and (min-width: 992px) {
 
   ul {
     padding: 0;
@@ -201,5 +176,15 @@ p {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+  }
+
+  .desc {
+    gap: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.1);
+    background: #ebede8;
+    margin: 2rem 20rem 20rem 20rem;
+    vertical-align: top;
+    padding: 2rem;
   }
 }
