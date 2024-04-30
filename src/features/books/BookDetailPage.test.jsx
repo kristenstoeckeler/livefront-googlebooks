@@ -46,15 +46,11 @@ describe("BookDetail component", () => {
     };
 
     beforeEach(() => {
-        
-    });
-
-    afterEach(() => {
-        useSelector.mockClear();
+        useSelector.mockClear();  
     });
 
 
-  it("should render BookDetail component", () => {
+    it("should render BookDetail component", () => {
     useSelector.mockImplementation(callback => {
             return callback(mockAppState);
         });

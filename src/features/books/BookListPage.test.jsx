@@ -75,11 +75,14 @@ describe("BookList component", () => {
                 return callback(mockAppState);
             });
         render(<BookList />);
-        const title = screen.getByText("N.K. Jemisin's Complete Works")
+        const title = screen.getByText("THE COMPLETE WORKS OF")
+        const title2 = screen.getByText("N.K. JEMISIN")
         const links = screen.getAllByTestId("link");
         const imgs = screen.getAllByTestId("img");
 
         expect(title).toBeInTheDocument();
+        expect(title2).toBeInTheDocument();
+
         links.forEach((link) =>{
             expect(link).toBeInTheDocument();
         });
@@ -99,9 +102,12 @@ describe("BookList component", () => {
             });
         render(<BookList />);
         
-        const title = screen.getByText("N.K. Jemisin's Complete Works");
+        const title = screen.getByText("THE COMPLETE WORKS OF");
+        const title2 = screen.getByText("N.K. JEMISIN")
         const link = screen.queryByTestId("link");
         const img = screen.queryByTestId("img");
+        expect(title).toBeInTheDocument();
+        expect(title2).toBeInTheDocument();
         expect(title).toBeInTheDocument();
         expect(link).toBeNull();
         expect(img).toBeNull();
